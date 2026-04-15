@@ -1,0 +1,5 @@
+Email: alicesmith911@gmail.com
+Name: Alice Smith
+Age: 25
+Job: Data Analyst at Goldman Sachs
+Salary: $120000

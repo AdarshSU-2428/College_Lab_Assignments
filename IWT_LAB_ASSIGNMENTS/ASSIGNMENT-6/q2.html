@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="toggleParagraph">This is the paragraph of text whose visibility can be toggled by clicking the
+    button below.</p>
+    <button onclick="toggleVisibility()">Show/Hide Paragraph</button>
+    <script>
+        function toggleVisibility() {
+            var paragraph = document.getElementById("toggleParagraph");
+            var button = document.querySelector("button");
+            if (paragraph.style.display === "none") {
+                paragraph.style.display = "block";
+                button.textContent = "Hide Paragraph";
+            } else {
+                paragraph.style.display = "none";
+                button.textContent = "Show Paragraph";
+            }
+        }
+    </script>
+</body>
+</html>

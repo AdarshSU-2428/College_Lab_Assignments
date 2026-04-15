@@ -1,0 +1,5 @@
+MVI A, 18H;
+MVI B, 28H;
+ADD B;
+STA 2026H;
+HLT;

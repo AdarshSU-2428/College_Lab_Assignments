@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online course registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; 
+        }
+
+        input[type="radio"], 
+        input[type="checkbox"] {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        input[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Full Name: </label>
+        <input type="text" name="fullname" required><br><br>
+        <label>Email :</label>
+        <input type="email" name="email" required><br><br>
+        <label>Password :</label>
+        <input type="password" name="password" required><br><br>
+        <label>Confirm Password :</label>
+        <input type="password" name="confirmpassword" required><br><br>
+        <label>Date of Birth: </label>
+        <input type="date" name="DOB"><br><br>
+        <label>Gender: </label>
+        <input type="radio" name="gender" value="Male">Male
+        <input type="radio" name="gender" value="Female">Female
+        <input type="radio"name="gender" value="Other">Other
+        <br><br>
+        <label>Courses: </label>
+        <select name="courses">
+            <option value="b.tech">B.Tech</option>
+            <option value="m.tech">M.Tech</option>
+            <option value="mca">MCA</option>
+            <option value="mba">MBA</option>
+        </select><br><br>
+        <label>Skills: </label>
+        <input type="checkbox" name="skills" value="html">HTML<br>
+        <input type="checkbox" name="skills" value="css">CSS<br>
+        <input type="checkbox" name="skills" value="javascript">JavaScript<br>
+        <input type="checkbox" name="skills" value="python">Python<br>
+        <input type="checkbox" name="skills" value="java">Java<br><br>
+        <label>Address: </label><br>
+        <textarea rows="4" cols="40"></textarea><br><br>
+        <label>Upload Resume: </label><br>
+        <input type="file"><br><br>
+        <input type="submit" value="SUBMIT">
+        <input type="reset" value="RESET">
+    </form>
+</body>
+</html>

@@ -1,0 +1,3 @@
+Hello world
+Learning Python is fun
+Code daily for success

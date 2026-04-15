@@ -1,0 +1,2 @@
+Earth lines, or geographic coordinates, are imaginary horizontal (latitude) and vertical (longitude) lines used to map, locate, and navigate any point on Earth. 
+These lines form a grid, with latitude measuring distance north/south of the equator and longitude measuring east/west of the Prime Meridian.

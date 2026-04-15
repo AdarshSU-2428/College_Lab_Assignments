@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0; padding: 10px 20px;
+            background-color: #f0f0f0; 
+        }
+        .button-container {
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            transition: transform 0.1s;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        #redBtn { background-color: #e74c3c; }
+        #greenBtn { background-color: #2ecc71; }
+        #blueBtn { background-color: #3498db; }
+        #colorDiv {
+            width: 300px;
+            height: 200px;
+            background-color: white; /* Initial background color for the div */
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: background-color 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button id="redBtn" onclick="changeColor('red')">Red</button>
+        <button id="greenBtn" onclick="changeColor('green')">Green</button>
+        <button id="blueBtn" onclick="changeColor('blue')">Blue</button>
+    </div>
+    <div id="colorDiv">
+        The background color of this div will change.
+    </div>
+    <script>
+        function changeColor(colorName) {
+            const isConfirmed = confirm(`Are you sure you want to change the color to ${colorName}?`);
+
+            if (isConfirmed) {
+                const targetDiv = document.getElementById('colorDiv');
+                targetDiv.style.backgroundColor = colorName;
+            }
+        }
+    </script>
+</body>
+</html>

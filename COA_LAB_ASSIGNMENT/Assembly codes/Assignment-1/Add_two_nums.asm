@@ -1,0 +1,5 @@
+MVI A, 45H;
+MVI B, 38H;
+ADD B;
+HLT;
+

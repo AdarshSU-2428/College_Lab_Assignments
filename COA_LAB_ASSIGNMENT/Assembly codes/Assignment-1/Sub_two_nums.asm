@@ -1,0 +1,4 @@
+MVI A, 45H;
+MVI B, 38H;
+SUB B;
+HLT;

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>counter</h2>
+    <input type="text" id="counter" value="0" readonly>
+    <button onclick="increment()">+</button>
+    <button onclick="decrement()">-</button>
+    <script>
+        function increment(){
+            let counter=document.getElementById("counter");
+            counter.value=parseInt(counter.value)+1;
+        }
+        function decrement(){
+            let counter=document.getElementById("counter");
+            if (parseInt(counter.value)>0){
+                counter.value=parseInt(counter.value)-1;
+            }
+        }
+    </script>
+</body>
+</html>
