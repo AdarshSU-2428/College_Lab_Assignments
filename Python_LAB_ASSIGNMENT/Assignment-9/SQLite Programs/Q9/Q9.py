@@ -40,4 +40,5 @@ db.update(2, 55000)
 db.display_high_salary()
 
 db.delete(1)
+db.display_high_salary()
 db.close()

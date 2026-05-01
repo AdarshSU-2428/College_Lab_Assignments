@@ -11,16 +11,16 @@ CREATE TABLE IF NOT EXISTS PUPILS(
 )
 """)
 
-students = [
-    (1, "Anish", 70),
-    (2, "Bhim", 85),
-    (3, "Rita", 90),
-    (4, "Debdutta", 60),
-    (5, "Eshwar", 75)
-]
-
-cursor.executemany("INSERT INTO PUPILS VALUES (?, ?, ?)", students)
-conn.commit()
+##students = [
+##    (1, "Anish", 70),
+##    (2, "Bhim", 85),
+##    (3, "Rita", 90),
+##    (4, "Debdutta", 60),
+##    (5, "Eshwar", 75)
+##]
+##
+##cursor.executemany("INSERT INTO PUPILS VALUES (?, ?, ?)", students)
+##conn.commit()
 
 print("All Students:")
 cursor.execute("SELECT * FROM PUPILS")

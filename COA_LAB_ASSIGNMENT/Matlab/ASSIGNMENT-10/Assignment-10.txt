@@ -1,0 +1,112 @@
+✅ 1. 10×10 Random Matrix Operations
+A = rand(10);
+A = round(A * 100)
+A(A < 10) = 0
+vec = A(A >= 30 & A <= 50)
+
+✅ 2. Create 12×10 Matrix
+A = rand(12,10)
+
+✅ 3. Display specific elements
+A(8,9)
+A(3,6)
+A(10,11) → % ERROR (column doesn't exist)
+A(8,7)
+A(9,12) → % ERROR (column doesn't exist)
+
+✅ 4. Make positions zero
+A(8,9) = 0;
+A(3,6) = 0;
+A(8,7) = 0;
+
+✅ 5. Sub-matrix
+A(2:3, 1:5)
+
+✅ 6. Matrix from A(2,3)
+A(2:end, 3:end)
+
+✅ 7. Delete row & column
+A(2,:) = [];   % delete row 2
+A(:,3) = [];   % delete column 3
+
+✅ 8. zeros, ones, eye
+Z = zeros(3,3)
+O = ones(3,3)
+I = eye(3)
+
+Purpose:
+zeros → matrix of all 0s
+ones → matrix of all 1s
+eye → identity matrix
+
+✅ 9. Identity Matrix
+I = eye(5)
+
+✅ 10. Diagonal Matrix
+D = diag([1 2 3 4])
+
+✅ 11. Same elements matrix
+
+A = 5 * ones(4,4)
+
+✅ 12. linspace & logspace
+a = linspace(1,10,5)
+b = logspace(1,3,5)
+
+Purpose:
+linspace(a,b,n) → n equally spaced values from a to b
+logspace(a,b,n) → n logarithmically spaced values
+
+✅ 13. Matrix Properties (True/False)
+A = rand(3);
+B = rand(3);
+C = rand(3);
+
+% i
+isequal(A+B, B+A)        % TRUE
+% ii
+isequal(A-B, B-A)        % FALSE
+% iii
+isequal(A+(B+C), (A+B)+C) % TRUE
+% iv
+isequal(A*(B+C), A*B + A*C) % TRUE
+% v
+isequal((B+C)/A, B/A + C/A) % TRUE (if A invertible)
+% vi
+isequal(A*B, B*A)        % FALSE (generally)
+% vii
+isequal(A*1, A)          % TRUE
+% viii
+isequal(A*inv(A), eye(3)) % TRUE (if invertible)
+% ix
+isequal(A, A')           % FALSE (generally)
+% x
+isequal(A, -A')          % FALSE
+
+✅ 14. (Same as Q1 repeated)
+A = rand(10);
+A = round(A*100);
+A(A < 10) = 0;
+vec = A(A >= 30 & A <= 50);
+
+✅ 15. Matrix operations
+A = [1 2; 3 4; 5 6];
+B = [1 2 3; 4 5 6];
+
+% (i)
+AB = A * B;
+result1 = AB^20
+% (ii)
+BA = B * A;
+M = BA^6;
+[eig_vec, eig_val] = eig(M)
+
+✅ 16. 20×20 Matrix manipulation
+A = ones(20);
+% 10x10 center block zero
+A(6:15, 6:15) = 0;
+% top-right 5x5 zero
+A(1:5, 16:20) = 0;
+% bottom-left 5x5 zero
+A(16:20, 1:5) = 0;
+A
